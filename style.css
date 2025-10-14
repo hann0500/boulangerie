@@ -1,0 +1,463 @@
+/* ------------------------
+   1. Base / Global Styles
+------------------------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ------------------------
+   2. Header / Hero Section
+------------------------- */
+header {
+  background: linear-gradient(135deg, #ffdac1, #ffb6b9);
+  color: #5a2e2e;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.hero-slogan {
+  font-style: italic;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #8e3b46;
+}
+
+/* ------------------------
+   3. Section Layout
+------------------------- */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ------------------------
+   4. Product Grid
+------------------------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: stretch;
+}
+
+.product {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 180px; /* bigger images */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.product h3 {
+  font-size: 1.05em;
+  color: #c0392b;
+  margin: 10px 0;
+  min-height: 55px;
+}
+
+.product p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin-bottom: 8px;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-gallery {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.variation {
+  text-align: center;
+  max-width: 120px;
+}
+
+.variation img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.variation p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+/* ------------------------
+   5. Delivery Card
+------------------------- */
+.delivery-card {
+  background: #fff7f0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.delivery-card h2 {
+  text-align: center;
+  color: #a52a2a;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.delivery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.delivery-box {
+  flex: 1 1 45%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.delivery-box h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.delivery-box ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.delivery-box li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ------------------------
+   6. Pricing Card & Table
+------------------------- */
+.pricing-card {
+  background: linear-gradient(145deg, #fff8f5, #fdf6f0);
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 35px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+}
+
+.pricing-card h2 {
+  text-align: center;
+  color: #8b0000;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #e0d4cf;
+  padding: 12px 14px;
+  text-align: center;
+}
+
+.pricing-table th {
+  background-color: #f2d9d0;
+  color: #4a2c2a;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.05rem;
+  background-color: #ffecec;
+  color: #8b0000;
+}
+
+.pricing-table tr:nth-child(even):not(.product-row) {
+  background-color: #fafafa;
+}
+
+.pricing-table tr:hover {
+  background-color: #fff2f2;
+  transition: background 0.3s ease;
+}
+
+/* ------------------------
+   7. About Section
+------------------------- */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.about img {
+  flex: 1 1 400px;
+  width: 100%;
+  border-radius: 16px;
+  margin-right: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h2 {
+  color: #c0392b;
+}
+
+.about-text p {
+  margin-top: 10px;
+}
+
+.about-quote {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: #e67e22;
+}
+
+/* ------------------------
+   8. Product Detail Pages
+------------------------- */
+.product-details {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.detail-card {
+  page-break-before: always; /* ensure each starts on a new printed page */
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.detail-card h3 {
+  color: #c0392b;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.detail-card img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.detail-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.detail-table th,
+.detail-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.detail-table th {
+  width: 25%;
+  background: #f9f2ef;
+  color: #5a2e2e;
+}
+
+/* ------------------------
+   9. Footer
+------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffb6b9;
+  color: #5a2e2e;
+  margin-top: 40px;
+}
+
+/* ------------------------
+   10. Utility Classes
+------------------------- */
+.icon-inline {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* ------------------------
+   11. Print Styles (A4)
+------------------------- */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000;
+    font-size: 10pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  header, footer, section, .pricing-card, .delivery-card, .about {
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    padding: 10px !important;
+    margin: 10px auto !important;
+  }
+
+  header h1 { font-size: 18pt; }
+  .hero-slogan { font-size: 10pt; }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .product {
+    padding: 8px !important;
+    font-size: 9pt;
+    box-shadow: none !important;
+    height: auto !important;
+  }
+
+  .product img {
+    width: 100% !important;
+    height: 140px !important;
+    object-fit: cover;
+    margin-bottom: 6px;
+  }
+
+  .product h3 {
+    font-size: 10pt !important;
+    margin: 4px 0;
+    min-height: auto !important;
+  }
+
+  .product p {
+    font-size: 9pt !important;
+    margin: 2px 0;
+  }
+
+  .pricing-table {
+    font-size: 9pt !important;
+    page-break-inside: avoid;
+    margin-top: 6px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    border: 1px solid #000 !important;
+    padding: 4px 6px !important;
+  }
+
+  .delivery-content {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .delivery-box {
+    flex: 1 1 100% !important;
+    margin-bottom: 8px;
+    box-shadow: none !important;
+  }
+
+  .about {
+    display: block !important;
+  }
+
+  .about img {
+    max-height: 180px !important;
+    width: 100% !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  .about-text { font-size: 9pt !important; }
+  .about-quote { font-size: 9pt !important; margin-top: 8px; }
+
+  footer {
+    font-size: 9pt !important;
+    background: none !important;
+    color: #000 !important;
+    margin-top: 10px;
+  }
+
+  * {
+    transition: none !important;
+    transform: none !important;
+  }
+}
